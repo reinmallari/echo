@@ -30,27 +30,7 @@ restService.post("/echo", function(req, res) {
 restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
-    //Speech Synthesis Markup Language 
-    case "music one":
-      speech =
-        '<speak><audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
-      break;
-    case "music two":
-      speech =
-        '<speak><audio clipBegin="1s" clipEnd="3s" src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
-      break;
-    case "music three":
-      speech =
-        '<speak><audio repeatCount="2" soundLevel="-15db" src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
-      break;
-    case "music four":
-      speech =
-        '<speak><audio speed="200%" src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
-      break;
-    case "music five":
-      speech =
-        '<audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio>';
-      break;
+    //Speech Synthesis Markup Language
     case "delay":
       speech =
         '<speak>Let me take a break for 3 seconds. <break time="3s"/> I am back again.</speak>';
